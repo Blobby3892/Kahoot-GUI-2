@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>epic hackerman kahoot terminal window</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Questrial", caption;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="top"></div id="top">
+    <div class="container">
+      <div class="columns">
+        <div class="column col-10">
+          <h1 class="text-center">epic yeet kahoot terminal</h1>
+
+          <form id="todo-form">
+            <div class="form-group">
+              <label class="form-label" type="text" for="add-input"
+                >name:</label
+              >
+              <input
+                id="name-input"
+                required
+                class="form-input"
+                type="text"
+                name="add-input"
+                placeholder="yeet epic man"
+              />
+              <br />
+              <label required class="form-label" for="add-input">pin:</label>
+              <input
+                required
+                class="form-input"
+                type="number"
+                name="add-input"
+                placeholder="3481551"
+              />
+              <br />
+              <label required class="form-label" for="add-input"
+                >number of bots:</label
+              >
+              <input
+                required
+                class="form-input"
+                min="1"
+                max="100000"
+                type="number"
+                name="add-input"
+                placeholder="100"
+              />
+              <br />
+              <label required class="form-label" for="add-input"
+                >join delay:</label
+              >
+              <input
+                required
+                class="form-input"
+                min="50"
+                type="number"
+                name="add-input"
+                placeholder="100"
+              />
+              <br />
+            </div>
+<br>
+            <button class="btn">yeet</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br />
+    <button id="open-settings-btn" class="btn">toggle advanced settings menu</button>
+    <br />
+    <div>
+      <br />
+      <hr />
+      <h4>console:</h4>
+      <button id="toggle-show-btn" class="btn">toggle show</button>
+
+      <button id="open-nav-btn" class="btn">show quiz infos</button>
+
+      <button id="stop-btn" class="btn">kill bot spawner</button>
+
+      <button id="leave-btn" class="btn">make all bots leave</button>
+
+      <br /><br />
+
+      <textarea
+        style="display: none;"
+        class="console"
+        id="status"
+        rows="10"
+        cols="90"
+        readonly
+      >
+Kahoot Yeeter program started.
+</textarea
+      >
+    </div>
+
+    <div id="sidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id="close-nav-btn">&times;</a>
+      <a id="quiz-name" href="#">unknown</a>
+      <a id="question-amount" href="#">unknown</a>
+      <a id="current-question" href="#">unknown</a>
+      <a id="bot-amount" href="#">unknown</a>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div style="display: none;" class="settings" id="settings">
+      <h1>advanced settings</h1>
+      <form id="settings-form">
+        <div class="form-group">
+          <h2>names:</h2>
+          <label class="form-label" type="text" for="add-input"
+            >[prefix]+[number]:</label
+          >
+          <input
+            id="prefix-number"
+            required
+            class="radio"
+            type="radio"
+            name="add-input"
+            checked
+          />
+          <br />
+          <label required class="form-label" for="add-input"
+            >[number]+[suffix]:</label
+          >
+          <input
+            id="number-suffix"
+            required
+            class="radio"
+            type="radio"
+            name="add-input"
+          />
+          <br />
+          <label required class="form-label" for="add-input"
+            >From list below:</label
+          >
+          <input
+            id="name-list"
+            required
+            class="radio"
+            type="radio"
+            name="add-input"
+          />
+          <br />
+          <label class="form-label" type="text" for="add-input"
+            >Names (seperate by newline):</label
+          >
+          <textarea id="bot-name-list"></textarea>
+          <br>
+          <button id="input-names-btn" class="btn">input generic names</button>
+          <br>
+          <br>
+          <button id="randomize-btn" class="btn">randomize</button>
+        </div>
+        <div class="form-group">
+          <h2>rejoin:</h2>
+          <label required class="form-label" for="add-input"
+            >rejoin amount:</label
+          >
+          <input
+            id="rejoin-amount"
+            required
+            class="form-input"
+            type="number"
+            name="add-input"
+            value="0"
+            min="0"
+            max="1000"
+          />
+        </div>
+        <br>
+        <button id="save-form-btn" class="btn">save</button>
+      </form>
+    </div>
+
+    <script src="./yeeter.js"></script>
+    <script>
+      var __1 = require("custom-electron-titlebar");
+      new __1.Titlebar({
+        backgroundColor: __1.Color.fromHex("#7E48BD"),
+        icon: "./logo.png",
+        shadow: true
+      });
+    </script>
+  </body id="top">
+</html>
